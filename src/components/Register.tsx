@@ -14,6 +14,7 @@ const Register: React.FC = () => {
     e.preventDefault();
     try {
       await register(username, email, password);
+      alert('Registration successful! Please log in.');
       navigate('/login');
     } catch (err) {
       if (err instanceof Error) {

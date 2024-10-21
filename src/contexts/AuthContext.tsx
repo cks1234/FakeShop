@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
+import axios from 'axios';
 
 interface User {
   userId: string;
@@ -25,22 +26,32 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, []);
 
   const login = async (email: string, password: string) => {
-    // Simulating login
-    const user = { userId: '1', username: email.split('@')[0] };
-    setUser(user);
-    localStorage.setItem('user', JSON.stringify(user));
+    try {
+      const response = await axios.post('http://localhost:5000/api/users/login', { email, password });
+      const { token, userId, username } = response.data;
+      const user = { userId, username };
+      setUser(user);
+      localStorage.setItem('user', JSON.stringify(user));
+      localStorage.setItem('token', token);
+    } catch (error) {
+      console.error('Login error:', error);
+      throw new Error('Login failed. Please check your credentials.');
+    }
   };
 
   const register = async (username: string, email: string, password: string) => {
-    // Simulating registration
-    const user = { userId: '1', username };
-    setUser(user);
-    localStorage.setItem('user', JSON.stringify(user));
+    try {
+      await axios.post('http://localhost:5000/api/users/register', { username, email, password });
+    } catch (error) {
+      console.error('Registration error:', error);
+      throw new Error('Registration failed. Please try again.');
+    }
   };
 
   const logout = () => {
     setUser(null);
     localStorage.removeItem('user');
+    localStorage.removeItem('token');
   };
 
   return (
