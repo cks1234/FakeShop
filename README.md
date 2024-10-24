@@ -34,19 +34,14 @@
 
 To run the project locally, follow these steps:
 
-### 1. Clone the repository
-
-```bash
 git clone https://github.com/cks1234/FakeShop.git
 2. Install frontend dependencies
 Navigate to the project root directory and install the frontend dependencies.
 
-bash
 npm install
 3. Install backend dependencies
 Move to the server directory and install the backend dependencies.
 
-bash
 cd server
 npm install
 4. Setup environment variables
@@ -79,40 +74,3 @@ cd server
 node index.js
 The frontend will be available at http://localhost:3000, and the backend will run at http://localhost:5000.
 
-Environment Variables
-For both frontend and backend, environment variables are required:
-
-Backend .env:
-
-PORT=5000
-MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/fakeshop?retryWrites=true&w=majority
-JWT_SECRET=your_jwt_secret_key
-MONGODB_URI: Your MongoDB connection string.
-JWT_SECRET: The secret key used to sign JWT tokens.
-Frontend .env:
-
-REACT_APP_API_URL=http://localhost:5000
-REACT_APP_API_URL: The URL where the backend API is running.
-Usage
-Registration and Login:
-
-Users can register by providing a username, email, and password.
-Registered users can log in using their credentials, and a JWT token will be generated to authenticate further requests.
-Product Management:
-
-Admin users can add, edit, and delete products.
-Cart Management:
-
-Users can add products to their cart and manage the items.
-API Endpoints
-Auth Endpoints:
-POST /api/users/register: Register a new user.
-POST /api/users/login: Log in an existing user.
-Product Endpoints:
-GET /api/products: Get all products.
-POST /api/products: Create a new product (Admin only).
-Cart Endpoints:
-GET /api/cart: Get the current user's cart.
-POST /api/cart: Add a product to the cart.
-Screenshots
-Screenshots and GIFs of the running application can be added here to showcase how the application looks and functions.
