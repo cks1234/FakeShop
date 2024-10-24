@@ -1,5 +1,3 @@
-markdown
-Copy code
 # FakeShop
 
 **FakeShop** is a full-stack web application that simulates a simple e-commerce platform with user authentication and product management features. The backend is built using **Node.js** and **Express**, and the frontend is designed with a **React** framework. This project integrates **MongoDB** for data persistence and uses **JWT** for user authentication.
@@ -44,13 +42,11 @@ git clone https://github.com/cks1234/FakeShop.git
 Navigate to the project root directory and install the frontend dependencies.
 
 bash
-Copy code
 npm install
 3. Install backend dependencies
 Move to the server directory and install the backend dependencies.
 
 bash
-Copy code
 cd server
 npm install
 4. Setup environment variables
@@ -58,13 +54,10 @@ In the root of the project, create a .env file in both the root folder and serve
 
 Frontend .env (root):
 
-arduino
-Copy code
 REACT_APP_API_URL=http://localhost:5000
 Backend .env (inside server folder):
 
-bash
-Copy code
+
 PORT=5000
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/fakeshop?retryWrites=true&w=majority
 JWT_SECRET=your_jwt_secret_key
@@ -75,15 +68,13 @@ Run the frontend:
 
 From the project root directory, run:
 
-bash
-Copy code
+
 npm run dev
 Run the backend:
 
 Open a new terminal, navigate to the server folder, and run the backend server:
 
-bash
-Copy code
+
 cd server
 node index.js
 The frontend will be available at http://localhost:3000, and the backend will run at http://localhost:5000.
@@ -92,16 +83,14 @@ Environment Variables
 For both frontend and backend, environment variables are required:
 
 Backend .env:
-bash
-Copy code
+
 PORT=5000
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/fakeshop?retryWrites=true&w=majority
 JWT_SECRET=your_jwt_secret_key
 MONGODB_URI: Your MongoDB connection string.
 JWT_SECRET: The secret key used to sign JWT tokens.
 Frontend .env:
-bash
-Copy code
+
 REACT_APP_API_URL=http://localhost:5000
 REACT_APP_API_URL: The URL where the backend API is running.
 Usage
@@ -127,11 +116,3 @@ GET /api/cart: Get the current user's cart.
 POST /api/cart: Add a product to the cart.
 Screenshots
 Screenshots and GIFs of the running application can be added here to showcase how the application looks and functions.
-
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-csharp
-Copy code
-
-Save this content as `README.md` in your project folder. &#8203;:contentReference[oaicite:0]
