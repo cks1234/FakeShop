@@ -32,45 +32,12 @@
 
 ## Installation
 
-To run the project locally, follow these steps:
 
-git clone https://github.com/cks1234/FakeShop.git
-2. Install frontend dependencies
-Navigate to the project root directory and install the frontend dependencies.
-
-npm install
-3. Install backend dependencies
-Move to the server directory and install the backend dependencies.
-
-cd server
-npm install
-4. Setup environment variables
-In the root of the project, create a .env file in both the root folder and server folder with the following variables:
-
-Frontend .env (root):
-
-REACT_APP_API_URL=http://localhost:5000
-Backend .env (inside server folder):
-
-
-PORT=5000
-MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/fakeshop?retryWrites=true&w=majority
-JWT_SECRET=your_jwt_secret_key
-Replace <username>, <password>, and fakeshop with your MongoDB credentials and database name.
-
-5. Run the project
-Run the frontend:
-
-From the project root directory, run:
-
-
+1. npm install
+2. cd server && npm install
+3. From the project root directory, run:
 npm run dev
-Run the backend:
 
-Open a new terminal, navigate to the server folder, and run the backend server:
+4. cd server && node index.js
 
-
-cd server
-node index.js
 The frontend will be available at http://localhost:3000, and the backend will run at http://localhost:5000.
-
