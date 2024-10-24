@@ -2,15 +2,6 @@
 
 **FakeShop** is a full-stack web application that simulates a simple e-commerce platform with user authentication and product management features. The backend is built using **Node.js** and **Express**, and the frontend is designed with a **React** framework. This project integrates **MongoDB** for data persistence and uses **JWT** for user authentication.
 
-## Table of Contents
-
-1. [Features](#features)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Environment Variables](#environment-variables)
-5. [Usage](#usage)
-6. [API Endpoints](#api-endpoints)
-7. [Screenshots](#screenshots)
 
 ## Features
 
@@ -20,7 +11,6 @@
 - **Secure Passwords**: Uses **bcrypt** for password hashing.
 - **JWT Authentication**: Secures API routes with JWT tokens.
 - **MongoDB**: For persistent data storage.
-- **Cross-Origin Resource Sharing (CORS)**: Enabled for frontend-backend communication.
 
 ## Technologies
 
