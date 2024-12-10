@@ -1,5 +1,0 @@
-[[headers]]
-# JavaScript 파일에 대한 MIME 타입을 설정
-for = "*.js"  # 모든 .js 파일에 적용
-[headers.values]
-  Content-Type = "application/javascript"
