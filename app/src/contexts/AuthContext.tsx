@@ -27,7 +27,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const login = async (email: string, password: string) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/users/login', { email, password });
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/users/login`, { email, password });
       const { token, userId, username } = response.data;
       const user = { userId, username };
       setUser(user);
@@ -41,7 +41,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const register = async (username: string, email: string, password: string) => {
     try {
-      await axios.post('http://localhost:5000/api/users/register', { username, email, password });
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/users/register`, { username, email, password });
     } catch (error) {
       console.error('Registration error:', error);
       throw new Error('Registration failed. Please try again.');
