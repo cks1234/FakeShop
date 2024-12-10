@@ -18,7 +18,6 @@
 - **Frontend**: React, HTML, CSS, JavaScript
 - **Database**: MongoDB
 - **Authentication**: JWT (JSON Web Tokens)
-- **Deployment**: Netlify for frontend, Heroku or Render for backend
 
 ## Installation
 
@@ -31,4 +30,4 @@ npm run dev
 
 
 
-The frontend will be available at http://localhost:3000, and the backend will run at http://localhost:5000.
+The frontend will be available at http://localhost:5173, and the backend will run at http://localhost:5000.
