@@ -23,11 +23,12 @@
 ## Installation
 
 
-1. npm install
+1. cd app && npm install
 2. cd server && npm install
-3. From the project root directory, run:
+3. cd server && node index.js
+4. From the app directory, run:
 npm run dev
 
-4. cd server && node index.js
+
 
 The frontend will be available at http://localhost:3000, and the backend will run at http://localhost:5000.
